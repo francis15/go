@@ -14,17 +14,30 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'market' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'market' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'market' ), 'market', '<a href="http://underscores.me/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
+			<div class="site-info">
+				<div class="container">
+				<div class="footer-left">
+					<h3 class="rich"><?php the_field("about") ?></h3>
+					<p><?php the_field("about_description") ?></p>
+				</div>
+				<div class="footer-right">
+					<div class="products">
+						<h3 class="rich"><?php the_field("products")?></h3>
+						<a href="#"><?php the_field("products_links")?></a>
+					</div>
+
+					<div class="apis">
+						<h3 class="rich"><?php the_field("apis")?></h3>
+						<a href="#"><?php the_field("apis_links")?></a>
+					</div>
+
+					<div class="legal">
+						<h3 class="rich"><?php the_field("legal")?></h3>
+						<a href="#"><?php the_field("legal_links")?></a>
+					</div>
+				</div>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

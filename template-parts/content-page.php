@@ -26,7 +26,7 @@
 		<div class="acf-conent">
 			<div class="container">
 				<div class="left-acf-content">
-					<img src="<?php the_field('phone_image'); ?>"" alt="" witdh="300">
+					<img src="<?php the_field('phone_image'); ?>"" alt="">
 				</div>
 
 				<div class="right-acf-content">
@@ -78,30 +78,91 @@
 					<a href="#"><img src="<?php the_field('sponsor_image_four'); ?>"></a>
 					<a href="#"><img src="<?php the_field('sponsor_image_five'); ?>"></a>
 				</div>
+			</div> 
+
+			<div class="service">
+				<div class="container">
+					<p class="rich"><?php the_field('service_title'); ?></p>
+					<h3><?php the_field('service_description'); ?></h3>
+					<div class="service-first-row">
+						<div class="support">
+							<ul>
+								<li>
+									<img src="<?php the_field('service_image'); ?>">
+									<?php the_field("service_image_text") ?>
+								</li>
+								<li>
+									<img src="<?php the_field('service_image_2'); ?>">
+									<?php the_field("service_image_text_2") ?>
+								</li>
+								<li>
+									<img src="<?php the_field('service_image_3'); ?>">
+									<?php the_field("service_image_text_3") ?>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-second-row">
+						<div class="support">
+							<ul>
+								<li>
+									<img src="<?php the_field('service_image_4'); ?>">
+									<?php the_field("service_image_text_4") ?>
+								</li>
+								<li>
+									<img src="<?php the_field('service_image_5'); ?>">
+									<?php the_field("service_image_text_5") ?>
+								</li>
+								<li>
+									<img src="<?php the_field('service_image_6'); ?>">
+									<?php the_field("service_image_text_6") ?>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="business-talk">
+				<div class="container">
+					<p class="rich"><?php the_field('business'); ?></p>
+					<h3><?php the_field('business_tagline'); ?></h3>
+
+					<div class="plans">
+							<ul>
+								<li>
+									<p class="rich"><?php the_field('personal'); ?></p>
+									<img src="<?php the_field("personal_price") ?>">
+									<p class="border-none"><?php the_field("personal_description") ?></p>
+									<?php the_field("perosnal_plans") ?>
+									<?php the_field("perosnal_plans_2") ?>
+									<?php the_field("perosnal_plans_3") ?>
+									<a href="#"><?php the_field("personall_button")?></a>
+								</li>
+
+								<li>
+									<p class="rich"><?php the_field('business_name'); ?></p>
+									<img src="<?php the_field("business_plan") ?>">
+									<p class="border-none"><?php the_field("business_description") ?></p>
+									<?php the_field("business_plans") ?>
+									<?php the_field("business_plans_2") ?>
+									<?php the_field("business_plans_3") ?>
+									<a href="#"><?php the_field("business_button")  ?></a>
+								</li>
+
+								<li>
+									<p class="rich"><?php the_field('corporate'); ?></p>
+									<img src="<?php the_field("corporate_price") ?>">
+									<p class="border-none"><?php the_field("corporate_description") ?></p>
+									<?php the_field("corporate_plans") ?>
+									<?php the_field("corporate_plans_2") ?>
+									<?php the_field("corporate_plans_3") ?>
+									<a href="#"><?php the_field("corporate_button")  ?></a>
+								</li>
+							</ul>
+					</div>
+				</div>
 			</div>
 		
 	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'market' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
